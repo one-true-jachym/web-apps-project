@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://api.cajthaml.eu/uploads/reset_595b8cd7ad.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>:THE LONGING:</title>
+    <style>
+        body{
+            background-color: #000000;
+            font-size: 1.5em;
+            font-family: 'Pangolin', cursive;
+        }
+
+        h1{
+            font-size: 1.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            padding: 10px;
+        }
+
+        b{
+            font-weight: bold;
+        }
+
+        p{
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        nav{
+            color: #593C36;
+
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+
+            display: flex;
+
+            justify-content:space-between;
+
+            padding: 2%;
+        }
+
+        nav > div:hover{
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #backToTop{
+            position: fixed;
+            bottom: 1%;
+            right: 1%;
+
+            color: #593C36;
+
+            font-size: 200%;
+        }
+        
+        #backToTop:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #main{
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 50%;
+
+            background-color: #593C36;
+
+            text-align: center;
+
+            border-radius: 2%;
+        }
+
+        div.followRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            position: fixed;
+            right: 10%;
+            bottom: 2%;
+
+            width: 8%;
+            height: 100%;
+        }
+
+        div.followRight > div > a > img:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        div.followRight > div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.followRight > div > a > img{
+            width: 100%;
+            height: 100%;
+
+            object-fit: fill;
+        }
+
+        div.followLeft{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            position: fixed;
+            left: 5%;
+            bottom: 1%;
+
+            width: 11%;
+            height: 100%;
+        }
+
+        div.followLeft > div{
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.followLeft > div > a > img{
+            width: 100%;
+            height: 100%;
+
+            object-fit: fill;
+        }
+
+        div.followLeft > div > a > img:hover{
+            opacity: 0.5;
+        }
+
+        #logo{
+            margin-top: 5%;
+
+            width: 90%;
+        }
+
+        #videoWrapper { /*Source: https://faq.dailymotion.com/hc/en-us/articles/360022841393-How-to-preserve-the-player-aspect-ratio-on-a-responsive-page#:~:text=In%20the%20HTML%2C%20put%20the,56.25%25%20%3D%2016%3A9. */ 
+            position: relative;
+            padding-bottom: 45%; 
+
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 81%;
+        }
+            
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            width: 100%;
+            height: 100%;
+
+            margin-top: -15%;
+        }
+
+        #gallery{
+            width: 90%;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            text-align: center;
+        }
+
+        #currentImg > img{
+            width: 90%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        #selectImg{
+            display: flex;
+            justify-content: space-between;
+
+            padding-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 90%;
+        }
+
+        img.optionImg{
+            width: 18%;
+            height: 20%;
+            object-fit: cover;
+        }
+
+        img.optionImg:hover{
+            cursor: pointer;
+        }
+
+        #textStuff{
+            width: 90%;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding-top: 10%;
+        }
+
+        #textStuff > div{
+            padding-bottom: 5%;
+        }
+
+        ul{
+            width: 90%;
+            
+            text-align: left;
+            
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li{
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+
+        audio{
+            width: 60%;
+            padding: 2%;
+
+            background-color: #593C36;
+        }
+
+        #reviews{
+            width: 90%;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding-top: 10%;
+            padding-bottom: 5%;
+        }
+        #reviews > div{
+            text-align: right;
+            text-transform: uppercase;
+
+            padding-bottom: 5%;
+        }
+
+        #contactUs{
+            margin-top: 10%;
+            padding-bottom: 4%;
+        }
+
+        #contactUs > div > a > i{
+            font-size: 200%;
+
+            padding: 1%;
+        }
+
+        #contactUs > div > a > i:hover{
+            opacity: 0.5;
+        }
+
+        footer{
+            color: #593C36;
+
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+
+            text-align: center;
+            font-size: 70%;
+
+            padding: 2%;
+        }
+
+        @media(max-width: 1024px){
+            body{
+                font-size: 1.2em;
+            }
+
+            h1{
+                font-size: 1.7em;
+            }
+        }
+
+        @media(max-width: 426px){
+            body{
+                font-size: 0.6em;
+            }
+
+            h1{
+                font-size: 1.4em;
+            }
+        }
+
+        @media(min-width: 2500px){
+            body{
+                font-size: 2.3em;
+            }
+
+            h1{
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="backToTop"><i class="fas fa-caret-square-up"></i></div>
+    
+    <nav id="navBar">
+        <div id="jtTrailer">Trailer</div>
+        <div id="jtGallery">Gallery</div>
+        <div id="jtDescription">Desription</div>
+        <div id="jtMusic">Music</div>
+        <div id="jtReviews">Reviews</div>
+        <div id="jtContact">Contact</div>
+    </nav>
+    
+    <div id="main">
+        <div class="followRight">
+            <div>
+                <a href="https://store.steampowered.com/app/893850/THE_LONGING/"><img src="logo_steam.png" alt="buy" id="steam"></a>
+                <a href="https://www.gog.com/game/the_longing"><img src="logo_gog.png" alt="buy" id="gog"></a>
+            </div>
+        </div>
+        
+        <div class="followLeft">
+            <div>
+                <a href="https://igf.com/article/here-are-your-finalists-2020-independent-games-festival-awards"><img src="Laurels_IGF.png" alt="much prestige"></a>
+                <a href="https://amazestuff.tumblr.com/post/184139013534/a-maze-berlin-2019-award-winners"><img src="Laurels_amaze.png" alt="much prestige"></a>
+                <a href="http://www.ludicious.ch/awards-2020/"><img src="Laurels_ludicious.png" alt="much prestige"></a>
+                <a href="https://www.itfs.de/archive/itfs-2019/www.itfs.de/en/festival/award-winners/index.html"><img src="Laurels_itfs.png" alt="much prestige"></a>
+                <a href="https://deutscher-computerspielpreis.de/gewinner/"><img src="Laurels_dcp.png" alt="much prestige"></a>
+            </div>
+        </div>
+
+        <img src="logo.png" alt="logo" id="logo">
+
+        <div id="videoWrapper"> <!--https://www.w3schools.com/html/html_youtube.asp -->
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wl3oHAWh8RM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="gallery">
+            <div id="currentImg">
+                <img src="gal1.png" alt="cave vibez" id="i0" style="opacity: 1;">
+            </div>
+    
+            <div id="selectImg">
+    
+                <img src="gal1.png" alt="cave vibez" id="i1" class="optionImg" >
+    
+                <img src="gal2.png" alt="cave vibez" id="i2" style="opacity: 0.5;" class="optionImg">
+    
+                <img src="gal3.png" alt="cave vibez" id="i3" style="opacity: 0.5;" class="optionImg">
+    
+                <img src="gal4.png" alt="cave vibez" id="i4" style="opacity: 0.5;" class="optionImg">
+    
+                <img src="gal5.png" alt="cave vibez" id="i5" style="opacity: 0.5;" class="optionImg">
+    
+            </div>
+        </div>
+
+        <div id="textStuff">
+            <div>
+                <h1>Unusual mix of an adventure and an idle-game.</h1>
+
+                <p>Play as a lonely Shade, the last servant of a king who once ruled an underground kingdom. The king's powers have faded and he falls asleep for 400 days to regain his might. It is your duty to stay in the earthen palace until he awakens.</p>
+                
+                <p>As soon as you start, the game inevitably counts down the 400 days - even when you stop playing and exit the game.</p>
+                
+                <p>It is now up to you to decide what to do with your solitary existence beneath the soil. Don't stress yourself, you have plenty of time.</p>
+            </div>
+
+            <div>
+                <h1>Choose your playing style</h1>
+
+            <ul>
+                <li>Start the game and simply come back after 400 days to see how it ends. You actually don't have to play the game at all. But the Shade will be even more lonely without you.</li>
+
+                <li>Or explore the caves and collect items for your comfortable underground living room. Just send the Shade to take a stroll - the walking speed is slow, but luckily there is no need to hurry.</li>
+
+                <li>Read tons of classic literature from Nietzsche to Moby Dick right in the game - or at least have the shade read them. After all, time goes by faster if you learn to keep your mind occupied. (The little Shade in the game finds ONLY English books for now.)</li>
+
+                <li>Ignore the king's commands and advance to the outer regions the cave. It will be a long and dangerous journey into darkness...</li>
+            </ul>  
+            </div>
+        </div>
+        
+        <div id="soundtrackExamples">
+            <h1>Atmospheric Dungeon Synth soundtrack</h1>
+            <div>a few examples:</div>
+            <br>
+            <audio controls> <!--https://www.w3schools.com/tags/tag_audio.asp--> 
+                <source src="ost1.mp3" type="audio/mpeg">
+
+                Your browser does not support playing audio.
+            </audio>
+
+            <audio controls>
+                <source src="ost2.mp3" type="audio/mpeg">
+
+                Your browser does not support playing audio.
+            </audio>
+
+            <audio controls>
+                <source src="ost3.mp3" type="audio/mpeg">
+
+                Your browser does not support playing audio.
+            </audio>
+
+            <audio controls>
+                <source src="ost4.mp3" type="audio/mpeg">
+
+                Your browser does not support playing audio.
+            </audio>
+        </div>
+
+        <div id="reviews">
+            <h1>Reviews</h1>
+            <p>“Every so often a game comes along that is so audacious it reminds me how conventional and pedestrian many of the games that I’ve reviewed — and liked — are by comparison. This level of creativity reinvigorates my expectation of what games can be.”</p>
+            <div>90/100 – <b><a href="https://www.washingtonpost.com/video-games/reviews/longing-patience-lots-it-is-required-its-worth-every-minute/">The Washington Post</a></b></div> 
+
+            <p>“Literally sitting and waiting has called my attention to how it feels to wait, to the emotions that arise from being at the mercy of time.”</p>
+            <div>- <b><a href="https://kotaku.com/the-longing-which-can-take-over-a-year-to-finish-enco-1842213852">Kotaku</a></b></div>
+
+            <p>"Players can expect one of the most unusual video games of the year with The Longing from Studio Seufz"</p>
+            <div>- <b><a href="https://www.heise.de/newsticker/meldung/The-Longing-angespielt-400-Tage-Einsamkeit-4676147.html">heise.de, Germany</a></b></div>
+
+            <p>"A very original and atmospheric gaming experience and a fascinating experiment."</p>
+            <div>82/100 - <b><a href="https://www.pcgamer.se/2020/03/the-longing-recension/">PC Gamer, Sweden</a></b></div>
+
+            <p>"[...] we wish to accompany the Shade throughout his life, and he will accompany us even in our absences."</p>
+            <div>90/100 - <b><a href="https://uvejuegos.com/">uvejuegos.com, Spain</a></b></div>
+
+            <p>"The Longing shows beautiful art and unhurried gameplay."</p>
+            <div>4.2/5 - <b><a href="https://www.omegascopio.com.br/criticas/the-longing-mostra-uma-bela-arte-e-uma-gameplay-sem-pressa-critica/">omegascopio.com.br, Brazil</a></b></div>
+
+            <p>"The only flaw I can find in this little pearl is that we will hardly replay it, but it was created as a unique experience and so it will be for all those who buy it. You will not regret."</p>
+            <div>95/100 - <b><a href="https://www.pcguru.hu/teszt/the-longing-teszt-pc/3054">pcguru.hu, Hungary</a></b></div>
+            
+            <p>"The Longing is a fascinating adventure as long as you remember that it is not intended to be played in one, or even ten, sessions. "</p>
+            <div>80/100 - <b><a href="https://www.konsolifin.net/arvostelu/neljasataa-paivaa-kestava-luolastoseikkailu-the-longing">konsolifin.net, Finland</a></b></div>
+        </div>
+
+        <div id="contactUs">
+            <div>xoxo@studioseufz.com</div>
+            <div>
+                <a href="https://www.instagram.com/studio_seufz/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/studioseufz"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/AnselmPyta"><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div>This site was made by Jáchym Macura for education purposes. No copyright infringement intended.</div>
+        <div>All visuals and audio are property of Studio Seufz.</div>
+    </footer>
+
+    <script>
+        //scroll code source: https://usefulangle.com/post/156/javascript-scroll-to-element#:~:text=Scrolling%20to%20an%20element%20can,set%20through%20the%20scrollIntoViewOptions%20parameter.//
+        
+        //to top
+
+        let btTop = document.getElementById("backToTop");
+        let navBar = document.getElementById("navBar");
+
+        btTop.addEventListener("click", function(event) {
+            console.log(event);
+
+            navBar.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        });
+
+        //nav bar//
+
+        //jump to trailer//
+
+        let jtTrailer = document.getElementById("jtTrailer");
+        let destTrailer = document.getElementById("videoWrapper")
+
+        jtTrailer.addEventListener("click", function(event) {
+            console.log(event);
+
+            destTrailer.scrollIntoView({ behavior: 'smooth', block: 'center'});
+        });
+
+        //jump to gallery//
+
+        let jtGallery = document.getElementById("jtGallery");
+        let destGallery = document.getElementById("gallery")
+
+        jtGallery.addEventListener("click", function(event) {
+            console.log(event);
+
+            destGallery.scrollIntoView({ behavior: 'smooth', block: 'center'});
+        });
+
+        //jump to description// 
+
+        let jtDescription = document.getElementById("jtDescription");
+        let destDescription = document.getElementById("textStuff");
+
+        jtDescription.addEventListener("click", function(event) {
+            console.log(event);
+
+            destDescription.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        });
+
+        //jump to soundtrack//
+
+        let jtMusic = document.getElementById("jtMusic");
+        let destSoundtrack = document.getElementById("soundtrackExamples");
+
+        jtMusic.addEventListener("click", function(event) {
+            console.log(event);
+
+            destSoundtrack.scrollIntoView({ behavior: 'smooth', block: 'center'});
+        });
+
+        //jump to reviews//
+
+        let jtReviews = document.getElementById("jtReviews");
+        let destReviews = document.getElementById("reviews");
+
+        jtReviews.addEventListener("click", function(event) {
+            console.log(event);
+
+            destReviews.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        });
+
+        //jump to contact//
+
+        let jtContact = document.getElementById("jtContact");
+        let destContact = document.getElementById("contactUs");
+
+        jtContact.addEventListener("click", function(event) {
+            console.log(event);
+
+            destContact.scrollIntoView({ behavior: 'smooth', block: 'start'});
+        });
+
+        //gallery//
+
+        let im0 = document.getElementById("i0");
+        let im1 = document.getElementById("i1");
+        let im2 = document.getElementById("i2");
+        let im3 = document.getElementById("i3");
+        let im4 = document.getElementById("i4");
+        let im5 = document.getElementById("i5");
+
+        let curIm = 1;
+
+        im1.addEventListener("mouseover", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "0.7";
+        });
+        im2.addEventListener("mouseover", function(event) {
+            console.log(event);
+
+            im2.style.opacity = "0.7";
+        });
+        im3.addEventListener("mouseover", function(event) {
+            console.log(event);
+
+            im3.style.opacity = "0.7";
+        });
+        im4.addEventListener("mouseover", function(event) {
+            console.log(event);
+
+            im4.style.opacity = "0.7";
+        });
+        im5.addEventListener("mouseover", function(event) {
+            console.log(event);
+
+            im5.style.opacity = "0.7";
+        });
+
+        im1.addEventListener("click", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "1";
+            im2.style.opacity = "0.5";
+            im3.style.opacity = "0.5";
+            im4.style.opacity = "0.5";
+            im5.style.opacity = "0.5";
+            im0.src="gal1.png";
+
+            curIm = 1;
+        });
+        im2.addEventListener("click", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "0.5";
+            im2.style.opacity = "1";
+            im3.style.opacity = "0.5";
+            im4.style.opacity = "0.5";
+            im5.style.opacity = "0.5";
+            im0.src="gal2.png";
+            
+            curIm = 2;
+        });
+        im3.addEventListener("click", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "0.5";
+            im2.style.opacity = "0.5";
+            im3.style.opacity = "1";
+            im4.style.opacity = "0.5";
+            im5.style.opacity = "0.5";
+            im0.src="gal3.png";
+
+            curIm = 3;
+        });
+        im4.addEventListener("click", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "0.5";
+            im2.style.opacity = "0.5";
+            im3.style.opacity = "0.5";
+            im4.style.opacity = "1";
+            im5.style.opacity = "0.5";
+            im0.src="gal4.png";
+
+            curIm = 4;
+        });
+        im5.addEventListener("click", function(event) {
+            console.log(event);
+
+            im1.style.opacity = "0.5";
+            im2.style.opacity = "0.5";
+            im3.style.opacity = "0.5";
+            im4.style.opacity = "0.5";
+            im5.style.opacity = "1";
+            im0.src="gal5.png";
+
+            curIm = 5;
+        });
+
+        im1.addEventListener("mouseout", function(event) {
+            console.log(event);
+
+            if(curIm == 1){
+                im1.style.opacity = "1";
+            }
+            else{
+                im1.style.opacity = "0.5";
+            }
+        });
+        im2.addEventListener("mouseout", function(event) {
+            console.log(event);
+
+            if(curIm == 2){
+                im2.style.opacity = "2";
+            }
+            else{
+                im2.style.opacity = "0.5";
+            }
+        });
+        im3.addEventListener("mouseout", function(event) {
+            console.log(event);
+
+            if(curIm == 3){
+                im3.style.opacity = "3";
+            }
+            else{
+                im3.style.opacity = "0.5";
+            }
+        });
+        im4.addEventListener("mouseout", function(event) {
+            console.log(event);
+
+            if(curIm == 4){
+                im4.style.opacity = "4";
+            }
+            else{
+                im4.style.opacity = "0.5";
+            }
+        });
+        im5.addEventListener("mouseout", function(event) {
+            console.log(event);
+
+            if(curIm == 5){
+                im5.style.opacity = "5";
+            }
+            else{
+                im5.style.opacity = "0.5";
+            }
+        });
+    </script>
+</body>
+</html>

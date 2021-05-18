@@ -1,0 +1,314 @@
+body{
+    background-color: #000000;
+    font-size: 1.5em;
+    font-family: 'Pangolin', cursive;
+}
+
+h1{
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding: 10px;
+}
+
+b{
+    font-weight: bold;
+}
+
+p{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+nav{
+    color: #593C36;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    display: flex;
+
+    justify-content:space-between;
+
+    padding: 2%;
+}
+
+nav > div:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#backToTop{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+
+    color: #593C36;
+
+    font-size: 200%;
+}
+
+#backToTop:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#main{
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 50%;
+
+    background-color: #593C36;
+
+    text-align: center;
+
+    border-radius: 2%;
+}
+
+div.followRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    right: 10%;
+    bottom: 2%;
+
+    width: 8%;
+    height: 100%;
+}
+
+div.followRight > div > a > img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+div.followRight > div{
+    display: flex;
+    flex-direction: column;
+}
+
+div.followRight > div > a > img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+}
+
+div.followLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: fixed;
+    left: 8%;
+    bottom: 1%;
+
+    width: 11%;
+    height: 100%;
+}
+
+div.followLeft > div{
+    display: flex;
+    flex-direction: column;
+}
+
+div.followLeft > div > a > img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+}
+
+div.followLeft > div > a > img:hover{
+    opacity: 0.5;
+}
+
+#logo{
+    margin-top: 5%;
+
+    width: 90%;
+}
+
+#videoWrapper { /*Source: https://faq.dailymotion.com/hc/en-us/articles/360022841393-How-to-preserve-the-player-aspect-ratio-on-a-responsive-page#:~:text=In%20the%20HTML%2C%20put%20the,56.25%25%20%3D%2016%3A9. */ 
+    position: relative;
+    padding-bottom: 45%; 
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 81%;
+}
+    
+iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    margin-top: -15%;
+}
+
+#gallery{
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+#currentImg > img{
+    width: 90%;
+    height: 80%;
+    object-fit: cover;
+}
+
+#selectImg{
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 90%;
+}
+
+img.optionImg{
+    width: 18%;
+    height: 20%;
+    object-fit: cover;
+}
+
+img.optionImg:hover{
+    cursor: pointer;
+}
+
+#textStuff{
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 10%;
+}
+
+#textStuff > div{
+    padding-bottom: 5%;
+}
+
+ul{
+    width: 90%;
+    
+    text-align: left;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+audio{
+    width: 60%;
+    padding: 2%;
+
+    background-color: #593C36;
+}
+
+#reviews{
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+#reviews > div{
+    text-align: right;
+    text-transform: uppercase;
+
+    padding-bottom: 5%;
+}
+
+#contactUs{
+    margin-top: 10%;
+    padding-bottom: 4%;
+}
+
+#contactUs > div > a > i{
+    font-size: 200%;
+
+    padding: 1%;
+}
+
+#contactUs > div > a > i:hover{
+    opacity: 0.5;
+}
+
+footer{
+    color: #593C36;
+
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    font-size: 70%;
+
+    padding: 2%;
+}
+
+@media(max-width: 1024px){
+    body{
+        font-size: 1.2em;
+    }
+
+    h1{
+        font-size: 1.7em;
+    }
+}
+
+@media(max-width: 768px){
+    nav{
+        font-size: 0.6em;
+    }
+}
+
+@media(max-width: 426px){
+    body{
+        font-size: 0.6em;
+    }
+
+    h1{
+        font-size: 1.4em;
+    }
+}
+
+@media(min-width: 2500px){
+    body{
+        font-size: 2.3em;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+}
